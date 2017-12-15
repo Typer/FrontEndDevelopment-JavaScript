@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="nested-accordion.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+
+<div class="container">
+    <div class="row">
+        <dic class="col-xs-5">
+            <h1 id="title" style="size:45px;">A Simple Accordion</h1>
+            <div id="accordion" class="panel-group">
+
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <div class="item" href="#panelBodyOne" style="line-height: 30px; display: block; color: white;" data-toggle="collapse" data-parent="#accordion">
+                                Item 1
+                            </div>
+                        </h4>
+                    </div>
+                    <div id="panelBodyOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul>
+                                <li>Option 1</li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <div class="item" href="#panelBodyTwo" style="display: block; color: white;" data-toggle="collapse" data-parent="#accordion">
+                                Item 2
+                            </div>
+                        </h4>
+                    </div>
+                    <div id="panelBodyTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul>
+                                <li>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <div class="item" href="#panelBodyNestedOne" style="line-height: 30px; display: block; color: white;" data-toggle="collapse" data-parent="#accordion">
+                                                    Option 1
+                                                </div>
+                                            </h4>
+                                        </div>
+                                        <div id="panelBodyNestedOne" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <p>ewonfweo;infg;2eonigfoinfg;oingv;owirngv;owrngb;ownr;gobinwrgobvwr;</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <div class="item" href="#panelBodyThree" style="display: block; color: white;" data-toggle="collapse" data-parent="#accordion">
+                                Item 3
+                            </div>
+                        </h4>
+                    </div>
+                    <div id="panelBodyThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul>
+                                <li>
+                                    <div class="panel">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <div class="item" href="#panelBodyNestedFore" style="display: block; color: white;" data-toggle="collapse" data-parent="#accordion">
+                                                    Item 4
+                                                </div>
+                                            </h4>
+                                        </div>
+                                        <div id="panelBodyNestedFore" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <ul>
+                                                    <li>
+                                                        <div class="panel">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                    <div class="item" href="#panelBodyNNestedFore" style="display: block; color: white;" data-toggle="collapse" data-parent="#accordion">
+                                                                        Item 4
+                                                                    </div>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="panelBodyNNestedFore" class="panel-collapse collapse">
+
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <div class="item" href="#panelBodyFore" style="display: block; color: white;" data-toggle="collapse" data-parent="#accordion">
+                                Item 4
+                            </div>
+                        </h4>
+                    </div>
+                    <div id="panelBodyFore" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul>
+                                <li>Option 1</li>
+                                <li>Option 2</li>
+                                <li>Option 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </dic>
+    </div>
+</div>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

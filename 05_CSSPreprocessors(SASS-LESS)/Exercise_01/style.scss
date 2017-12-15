@@ -1,0 +1,96 @@
+$color-broun:#A32B2E;
+$color-blue:#0B24FB;
+$color-green:#AFFD45;
+$color-yellow:#FFFD38;
+$color-red:#FC0D1B;
+$text-size:40px;
+$right: 50%;
+
+@mixin size($width,$height){
+  width:$width;
+  height:$height;
+  border-radius: 50%;
+}
+
+.darts{
+  position: relative;
+  @include size(550px, 550px);
+
+  #ten{
+    @include size(550px, 550px);
+    background: $color-broun;
+    position: absolute;
+    z-index: 0;
+    span{
+      position: absolute;
+      color: #ffffff;
+      right: 45%;
+      font-size: $text-size;
+    }
+  }
+
+  #twenty{
+    @include size(450px, 450px);
+    background: $color-blue;
+    position: absolute;
+    z-index: 1;
+    left: calc(50% - 225px);
+    top: calc(50% - 225px);
+    span{
+      position: absolute;
+      color: #ffffff;
+      right: 44%;
+      font-size:$text-size;
+    }
+  }
+
+  #tirthy{
+    @include size(350px, 350px);
+    background: $color-green;
+    position: absolute;
+    z-index: 2;
+
+    left: calc(50% - 175px);
+    top: calc(50% - 175px);
+    span{
+      position: absolute;
+      color: #ffffff;
+      right: 43%;
+      font-size: $text-size;
+    }
+  }
+
+  #fifty{
+    @include size(250px, 250px);
+    background: $color-yellow;
+    position: absolute;
+    z-index: 3;
+    left: calc(50% - 125px);
+    top: calc(50% - 125px);
+    span{
+      position: absolute;
+      color: #ffffff;
+      right: 40%;
+      font-size: $text-size;
+    }
+  }
+
+  #sto{
+    @include size(150px, 150px);
+    background: $color-red;
+    position: absolute;
+    z-index: 4;
+    left: calc(50% - 75px);
+    top: calc(50% - 75px);
+    span{
+      position: absolute;
+      color: #ffffff;
+      right: 30%;
+      top:33%;
+      font-size: $text-size;
+    }
+  }
+
+
+}
+

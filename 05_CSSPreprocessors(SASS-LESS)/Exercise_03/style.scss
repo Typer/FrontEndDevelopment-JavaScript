@@ -1,0 +1,27 @@
+$radius : 10px;
+
+body{
+  width: 100%;
+             background: #B9B8B8;
+}
+
+main{
+  width: 1100px;
+  background: #EBEBEB;
+  margin:20px auto;
+  padding: 20px 0;
+  border-radius: $radius;
+  box-shadow: 5px 5px 0 #888888;
+
+  .img-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img{
+      width: 300px;
+      border:6px solid #ffffff;
+      margin:0 4px;
+    }
+  }
+}

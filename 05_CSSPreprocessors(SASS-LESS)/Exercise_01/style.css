@@ -1,0 +1,76 @@
+.darts {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%; }
+  .darts #ten {
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background: #A32B2E;
+    position: absolute;
+    z-index: 0; }
+    .darts #ten span {
+      position: absolute;
+      color: #ffffff;
+      right: 45%;
+      font-size: 40px; }
+  .darts #twenty {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: #0B24FB;
+    position: absolute;
+    z-index: 1;
+    left: calc(50% - 225px);
+    top: calc(50% - 225px); }
+    .darts #twenty span {
+      position: absolute;
+      color: #ffffff;
+      right: 44%;
+      font-size: 40px; }
+  .darts #tirthy {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: #AFFD45;
+    position: absolute;
+    z-index: 2;
+    left: calc(50% - 175px);
+    top: calc(50% - 175px); }
+    .darts #tirthy span {
+      position: absolute;
+      color: #ffffff;
+      right: 43%;
+      font-size: 40px; }
+  .darts #fifty {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: #FFFD38;
+    position: absolute;
+    z-index: 3;
+    left: calc(50% - 125px);
+    top: calc(50% - 125px); }
+    .darts #fifty span {
+      position: absolute;
+      color: #ffffff;
+      right: 40%;
+      font-size: 40px; }
+  .darts #sto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #FC0D1B;
+    position: absolute;
+    z-index: 4;
+    left: calc(50% - 75px);
+    top: calc(50% - 75px); }
+    .darts #sto span {
+      position: absolute;
+      color: #ffffff;
+      right: 30%;
+      top: 33%;
+      font-size: 40px; }
+
+/*# sourceMappingURL=style.css.map */

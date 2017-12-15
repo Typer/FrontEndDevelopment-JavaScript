@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+Get Post:
+<input type="number" id="postId" value="0">
+<button onclick="loadPost()">Load Post</button>
+<div id="post"></div>
+
+<script>
+    async function  loadPost() {
+        const postId = $('#postId').val();
+        const data = $.ajax({
+            url: `https://fir-app-17-11-2017.firebaseio.com/post/${postId}.json`,
+            success: (data) => {
+                $('#post').html(createArticle(data));
+            }
+        });
+    }
+
+    function createArticle(data){
+return `
+<article><header>${data.author}</header>
+<p>${data.title}</p>
+<footer>${data.year}</footer>
+</article>`}
+</script>
+</body>
+
+</html>

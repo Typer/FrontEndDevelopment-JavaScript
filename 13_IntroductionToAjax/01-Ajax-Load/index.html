@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<div id="text">
+    <h1>Turn Ajax in second leage</h1>
+    <button onclick ="loadTitle()">Load Title</button>
+</div>
+
+<script>
+    function loadTitle(){
+        $('#text').load('loadedHtml.html')
+    }
+</script>
+
+</body>
+</html>

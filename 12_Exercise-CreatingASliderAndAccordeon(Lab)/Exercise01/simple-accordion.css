@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width:100%;
+    font-family: 'Timok',serif;
+}
+
+main{
+    width: 500px;
+    margin:0 auto;
+}
+
+#title{
+    font-family: 'Timok', serif;
+    font-size: 50px;
+    color: #723839;
+    margin:30px auto;
+}
+
+.item{
+    font-family: 'Timok', serif;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+
+
+ul>li{
+    list-style: none;
+    font-family: 'Timok',serif;
+    color: #723839;
+    margin:10px auto;
+}
+
+.panel-heading{
+    background: #723839;
+    border-radius: 4px;
+}
+
+.panel-title{
+    margin:10px auto;
+}
+
+.panel-body{
+    padding: 0;
+}

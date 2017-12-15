@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300i,400,600,700');
+
+$color:#A7A7A7;
+$container-width:96%;
+
+@mixin container-style{
+  border:4px double $color;
+  background: #ffffff;
+}
+
+@mixin text-style{
+  font-size: 16px;
+  font-weight:300;
+  margin-top: 10px;
+}
+
+@mixin box-style($background-gradient){
+  width:15%;
+  height: 120px;
+  background: $background-gradient;
+  border-radius: 20px;
+}
+
+@mixin article-style{
+  width:$container-width;
+  margin:7px auto;
+  border:1px solid $color;
+  text-align: center;
+}
+
+@mixin inner-container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin:15px auto;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: linear-gradient(to bottom, #a5a5a5 30%,#a5a5a5 30%,#ffffff 100%);
+  width: 100%;
+  font-family:'Open Sans', sans-serif;
+  color: $color;
+
+}
+
+#wrapper{
+  @include container-style;
+  width: 900px;
+  margin:0 auto;
+
+  .onetwo{
+    @include container-style;
+    width:$container-width;
+    text-align: center;
+    margin:15px auto;
+
+    h1{
+      margin: 10px auto;
+    }
+
+    nav{
+      ul{
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        li{
+          width: 100px;
+          height: 30px;
+          @include container-style;
+          list-style: none;
+          &:nth-last-child(2){
+            margin:0 50px;
+          }
+          &:hover{
+            background: linear-gradient(to bottom, #a5a5a5 30%,#a5a5a5 30%,#ffffff 100%);
+            &:hover>a{
+              color: #ffffff;
+            }
+          }
+          a{
+            text-decoration: none;
+            color: $color;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .linear{
+    text-align: center;
+    @include container-style;
+    width:$container-width;
+    margin:15px auto;
+
+    #linear{
+      text-align: center;
+      h1{
+        font-size: 20px;
+        border-bottom:1px solid $color;
+        width: 155px;
+        margin:20px auto;
+        font-weight:400;
+      }
+    }
+    .first-article{
+      @include article-style;
+
+      #vertical{
+        h2{
+          @include text-style;
+        }
+
+      }
+      .innerContainer{
+        @include inner-container;
+
+        .purple{
+          @include box-style(linear-gradient(to bottom, #320532 0%,#fef5fe 100%));
+        }
+        .blue{
+          @include box-style(linear-gradient(to bottom, #1620b2 0%,#fcfcff 100%));
+        }
+        .green{
+          @include box-style(linear-gradient(to bottom, #053105 0%,#f5fef5 100%));
+        }
+        .yellow{
+          @include box-style(linear-gradient(to bottom, #f5f43a 0%,#ffffea 100%));
+        }
+        .orange{
+          @include box-style(linear-gradient(to bottom, #eb992c 0%,#fffeea 100%));
+        }
+        .red{
+          @include box-style(linear-gradient(to bottom, #ce181f 0%,#ffeeee 100%));
+        }
+      }
+    }
+
+    .second-article{
+      @include article-style;
+
+      #horizontal{
+        h2{
+          @include text-style;
+        }
+
+      }
+      .innerContainer{
+        @include inner-container;
+
+        .purple{
+          @include box-style(linear-gradient(to right, #320532 1%,#fef5fe 100%));
+        }
+        .blue{
+          @include box-style(linear-gradient(to right, #1620b2 1%,#fcfcff 100%));
+        }
+        .green{
+          @include box-style(linear-gradient(to right, #053105 0%,#f5fef5 100%));
+        }
+        .yellow{
+          @include box-style(linear-gradient(to right, #f5f43a 0%,#ffffea 100%));
+        }
+        .orange{
+          @include box-style(linear-gradient(to right, #eb992c 0%,#fffeea 100%));
+        }
+        .red{
+          @include box-style(linear-gradient(to right, #ce181f 0%,#ffeeee 100%));
+        }
+      }
+    }
+
+    .third-article{
+      @include article-style;
+      margin-bottom: 14px;
+
+      #diagonal{
+        h2{
+          @include text-style;
+        }
+
+      }
+      .innerContainer{
+        @include inner-container;
+
+        .purple{
+          @include box-style(linear-gradient(135deg, #320532 1%,#fef5fe 100%));
+        }
+        .blue{
+          @include box-style(linear-gradient(135deg, #1620b2 1%,#fcfcff 100%));
+        }
+        .green{
+          @include box-style(linear-gradient(135deg, #053105 0%,#f5fef5 100%));
+        }
+        .yellow{
+          @include box-style(linear-gradient(135deg, #f5f43a 0%,#ffffea 100%));
+        }
+        .orange{
+          @include box-style(linear-gradient(135deg, #eb992c 0%,#fffeea 100%));
+        }
+        .red{
+          @include box-style(linear-gradient(135deg, #ce181f 0%,#ffeeee 100%));
+        }
+      }
+    }
+  }
+
+  .radial{
+    text-align: center;
+    @include container-style;
+    width:$container-width;
+    margin:15px auto;
+    #radial{
+      text-align: center;
+      h1{
+        font-size: 20px;
+        border-bottom:1px solid $color;
+        width: 155px;
+        margin:20px auto;
+        font-weight:400;
+      }
+    }
+    article{
+      @include article-style;
+      margin-bottom: 14px;
+
+      .innerContainer{
+        @include inner-container;
+
+        .purple{
+          @include box-style(radial-gradient(ellipse at center, #320532 1%,#fef5fe 100%));
+        }
+        .blue{
+          @include box-style(radial-gradient(ellipse at center, #1620b2 1%,#fcfcff 100%));
+        }
+        .green{
+          @include box-style(radial-gradient(ellipse at center, #053105 0%,#f5fef5 100%));
+        }
+        .yellow{
+          @include box-style(radial-gradient(ellipse at center, #f5f43a 0%,#ffffea 100%));
+        }
+        .orange{
+          @include box-style(radial-gradient(ellipse at center, #eb992c 0%,#fffeea 100%));
+        }
+        .red{
+          @include box-style(radial-gradient(ellipse at center, #ce181f 0%,#ffeeee 100%));
+        }
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    @include container-style;
+    width:$container-width;
+    margin:15px auto;
+
+      h3 {
+        font-size: 20px;
+        border-bottom:1px solid $color;
+        width: 113px;
+        margin:20px auto;
+        font-weight:400;
+      }
+    ul{
+
+      margin-bottom: 20px;
+      li{
+        list-style: none;
+        color: $color;
+      a{
+        text-decoration: none;
+        color: $color;
+        }
+      }
+    }
+  }
+}
+
+
+
+

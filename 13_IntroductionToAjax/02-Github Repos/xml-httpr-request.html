@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="pathcss">
+    <script src="scripts/1.xhr.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+<input type="text" id="username" value="testnakov">
+<button onclick="loadRepos()">Load Repos</button>
+<ul id="res"></ul>
+<script>
+    async function loadRepos() {
+
+// -------------------------------------- Othe way to do it --------------------------------------
+
+        let urla = "https://api.github.com/users/" + $('#username').val() + "/repos";
+        let promise = $.get(urla);
+        promise.then(loadSuccess);
+
+// -----------------------------------------------------------------------------------------------
+
+// -------------------------------------- Othe way to do it --------------------------------------
+//        $.ajax({
+//            url: "https://api.github.com/users/" + $('#username').val() + "/repos",
+//            success: loadSuccess,
+//            error: displayError
+//        })
+
+// -----------------------------------------------------------------------------------------------
+        console.log(promise);
+    }
+    function loadSuccess(data){
+        for (let entry of data){
+            console.log(entry.full_name);
+            let element = $(`<li><a href="entry.html_url">${entry.full_name}</a></li>`);
+            $('#res').append(element);
+        }
+    }
+
+    function displayError(err) {
+        $('#res').append('<li>Error</li>');
+    }
+</script>
+</body>
+
+</html>
